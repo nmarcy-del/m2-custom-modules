@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- DISCLAIMER
+ * @category  Mag2
+ * @package   Mag2\TrackingUrl
+ * @author    Nathan Marcy <nathan.marcy@live.fr>
+ * @copyright 2021 nmarcy
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <native_tracking>
+            <service_url>
+                <dhl><![CDATA[http://webtrack.dhlglobalmail.com/?trackingnumber={{number}}]]></dhl>
+                <fedex><![CDATA[https://www.fedex.com/apps/fedextrack/?action=track&action=track&tracknumbers={{number}}]]></fedex>
+                <ups><![CDATA[https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums={{number}}]]></ups>
+                <usps><![CDATA[https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1={{number}}]]></usps>
+            </service_url>
+        </native_tracking>
+    </default>
+</config>

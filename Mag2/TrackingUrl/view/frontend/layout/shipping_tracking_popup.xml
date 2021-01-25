@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- DISCLAIMER
+ * @category  Mag2
+ * @package   Mag2\TrackingUrl
+ * @author    Nathan Marcy <nathan.marcy@live.fr>
+ * @copyright 2021 nmarcy
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="empty" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="shipping.tracking.popup" template="Mag2_TrackingUrl::/tracking/popupNew.phtml">
+            <arguments>
+                <argument name="view_model" xsi:type="object">Mag2\TrackingUrl\ViewModel\TrackingUrl</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

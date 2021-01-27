@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\SalesRule\Model\Validator" type="Lidl\SalesRule\Model\Validator" />
+
+    <!-- Remove SHipping Sales rule from discount description -->
+    <type name="Magento\SalesRule\Model\RulesApplier">
+        <plugin name="lidl_salesrule_remove_shippingdescription" type="Lidl\SalesRule\Plugin\SalesRule\Model\RulesApplierPlugin"/>
+    </type>
+    <type name="Magento\SalesRule\Model\Utility">
+        <plugin name="lidl_special_salesrules" type="Lidl\SalesRule\Plugin\SalesRule\Model\UtilityPlugin"/>
+    </type>
+</config>

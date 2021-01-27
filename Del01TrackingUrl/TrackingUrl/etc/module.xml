@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- DISCLAIMER
+ * @category  Del01TrackingUrl
+ * @package   Del01TrackingUrl\TrackingUrl
+ * @author    del01
+ * @copyright 2021 del01
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Del01TrackingUrl_TrackingUrl" />
+</config>

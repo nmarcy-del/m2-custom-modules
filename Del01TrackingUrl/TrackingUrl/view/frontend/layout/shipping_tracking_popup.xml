@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- DISCLAIMER
+ * @category  Del01TrackingUrl
+ * @package   Del01TrackingUrl\TrackingUrl
+ * @author    del01
+ * @copyright 2021 del01
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="empty" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="shipping.tracking.popup" template="Del01_TrackingUrl::/tracking/popupNew.phtml">
+            <arguments>
+                <argument name="view_model" xsi:type="object">Del01\TrackingUrl\ViewModel\TrackingUrl</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

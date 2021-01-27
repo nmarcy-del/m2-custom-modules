@@ -1,8 +1,0 @@
-{
-  "salesrule": {
-    "column": {
-      "lidl_start_time": true,
-      "lidl_end_time": true
-    }
-  }
-}

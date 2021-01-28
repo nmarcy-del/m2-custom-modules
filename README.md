@@ -1,5 +1,5 @@
 # m2-custom-modules
-variety of my magento 2 custom modules
+variety of my magento 2 custom modules for my futur use in several projet or four our disposal.
  
  - Del01TrackingUrl : 
  

@@ -10,7 +10,7 @@
  * @license   Open Software License ("OSL") v. 3.0
  */
 
-namespace Del01CarrierList\RapidCarrierList\Controller\All;
+namespace Del01CarrierList\RapidCarrierList\Controller\Show;
 
 use Magento\Config\Model\Config\Source\Locale\Currency\All;
 use Magento\Framework\App\Action\Context;
@@ -21,7 +21,7 @@ use Magento\Shipping\Model\Config\Source\Allmethods as AllCarrierCode;
 
 /**
  * Class Carriers
- * @package Del01CarrierList\RapidCarrierList\Controller\All
+ * @package Del01CarrierList\RapidCarrierList\Controller\Show
  */
 class Carriers extends Action
 {

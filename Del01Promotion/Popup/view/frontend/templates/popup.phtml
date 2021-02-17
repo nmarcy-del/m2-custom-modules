@@ -1,0 +1,31 @@
+<?php
+/** @var $block \Del01Promotion\Popup\Block\Popup */
+?>
+<?php if ($block->isEnabled() && $block->isShow()) : ?>
+        <div class="<?= $block->getModalId() ?>-custom-promo-popup no-display">
+            <div data-role="loader" class="loading-mask no-display">
+                <div class="loader">
+                    <img src="<?= /* @escapeNotVerified */ $this->getViewFileUrl('images/loader-1.gif') ?>"
+                         alt="<?= /* @escapeNotVerified */ __('Loading...') ?>"/>
+                </div>
+            </div>
+
+            <div class="page messages no-display">
+                <div class="messages"></div>
+            </div>
+
+            <form class="<?= $block->getModalId() ?>-form" action="<?= $block->getFormActionUrl() ?>" method="post">
+                <div class="content">
+                    <?= $block->getContent() ?>
+                </div>
+            </form>
+        </div>
+        <script type="text/x-magento-init">
+            {
+                "*": {
+                    "Del01Promotion_Popup/js/promo.popup": <?= $block->getJsonConfig() ?>
+                }
+            }
+        </script>
+<?php endif;?>
+

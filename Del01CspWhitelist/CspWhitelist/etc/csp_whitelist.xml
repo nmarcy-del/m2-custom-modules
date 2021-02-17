@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright  Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<csp_whitelist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Csp/etc/csp_whitelist.xsd">
+    <policies>
+        <policy id="default-src">
+            <values>
+                <!-- exemple : <value id="yourvalueid" type="host">*.domain.com</value> -->
+            </values>
+        </policy>
+        <policy id="script-src">
+            <values>
+
+            </values>
+        </policy>
+        <policy id="style-src">
+            <values>
+
+            </values>
+        </policy>
+        <policy id="img-src">
+            <values>
+
+            </values>
+        </policy>
+        <policy id="connect-src">
+            <values>
+
+            </values>
+        </policy>
+        <policy id="font-src">
+            <values>
+
+            </values>
+        </policy>
+        <policy id="frame-src">
+            <values>
+
+            </values>
+        </policy>
+    </policies>
+</csp_whitelist>

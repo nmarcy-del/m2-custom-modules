@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="del01promotion" translate="label" sortOrder="200000">
+            <label>Timed Popup</label>
+        </tab>
+        <section id="promopopup" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Promo Popup</label>
+            <tab>del01promotion</tab>
+            <resource>Del01Promotion_Popup::config</resource>
+            <group id="settings" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Settings</label>
+
+                <field id="enabled" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="modal_id" translate="label" type="text" sortOrder="105" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Form Id</label>
+                    <frontend_class>required-entry</frontend_class>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="type" translate="label" type="select" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Mode</label>
+                    <source_model>Del01Promotion\Popup\Model\Config\Source\DisplayType</source_model>
+                </field>
+
+
+                <field id="rule_id" translate="label" type="select" sortOrder="110" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Cart rule</label>
+                    <source_model>Del01Promotion\Popup\Model\Config\Source\CartRules</source_model>
+                    <comment>Select cart rule to generate coupon codes</comment>
+                    <depends>
+                        <field id="*/*/type">coupon</field>
+                    </depends>
+                </field>
+
+                <field id="area" translate="label" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Area</label>
+                    <source_model>Del01Promotion\Popup\Model\Config\Source\DisplayArea</source_model>
+                </field>
+
+                <field id="scenario" translate="label" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Method</label>
+                    <source_model>Del01Promotion\Popup\Model\Config\Source\Scenario</source_model>
+                </field>
+
+                <field id="delay" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Delay</label>
+                    <validate>validate-number validate-no-empty</validate>
+                    <comment>Delay before show modal (in second)</comment>
+                    <depends>
+                        <field id="*/*/scenario">delay</field>
+                    </depends>
+                </field>
+
+                <field id="scroll_count" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Scroll count</label>
+                    <validate>validate-number validate-no-empty</validate>
+                    <comment>Scroll count before show modal</comment>
+                    <depends>
+                        <field id="*/*/scenario">scroll</field>
+                    </depends>
+                </field>
+
+                <field id="limit" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Number of Appearance</label>
+                    <validate>validate-number validate-no-empty</validate>
+                    <comment>show this number time per day (set above)</comment>
+                </field>
+
+                <field id="reset_day" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Day before number of appearance reset</label>
+                    <validate>validate-number validate-no-empty</validate>
+                    <comment>Default is 7 days.</comment>
+                </field>
+
+                <field id="popup_start_time" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>del01promotion.startTime</label>
+                    <comment>"To 00:00 from 23:59"</comment>
+                </field>
+                <field id="popup_end_time" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>del01promotion.endTime</label>
+                    <comment>"To 00:00 from 23:59"</comment>
+                </field>
+
+                <field id="templates" translate="label comment" sortOrder="180" type="select" showInStore="1" showInDefault="1" >
+                    <label>Templates</label>
+                    <frontend_model>Del01Promotion\Popup\Block\Adminhtml\System\Config\Templates</frontend_model>
+                    <source_model>Del01Promotion\Popup\Model\Config\Source\Templates</source_model>
+                </field>
+
+                <field id="content" translate="label comment" sortOrder="190" type="editor" showInStore="1" showInDefault="1" >
+                    <label>Content</label>
+                    <frontend_model>Del01Promotion\Popup\Block\Adminhtml\System\Config\Wysiwyg</frontend_model>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

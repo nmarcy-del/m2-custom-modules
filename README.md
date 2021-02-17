@@ -17,4 +17,10 @@ variety of my magento 2 custom modules for my futur use in several projet or fou
  
  -Del01Promotion :
  
-  DailyTimedPromotion : Futur feature
+  DailyTimedPromotion : Add start and end time condition for promotion. If start and end time as set the rule validator check current time before
+    applying sales rule only if your order is made on correct range.
+  
+  Popup : Done => create popup with editor, select prewrite template, set display area and limit.
+    To do : set time range limit to display (in js file if true condition)
+    
+   

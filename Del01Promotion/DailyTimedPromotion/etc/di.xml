@@ -1,12 +1,16 @@
 <?xml version="1.0"?>
+<!-- DISCLAIMER
+ * @category  Del01Promotion
+ * @package   Del01Promotion\DailyTimedPromotion
+ * @author    Nathan Marcy <nathan.marcy@live.fr>
+ * @copyright 2021 nmarcy
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+ -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Magento\SalesRule\Model\Validator" type="Lidl\SalesRule\Model\Validator" />
+    <preference for="Magento\SalesRulePromotion\Model\Validator" type="Del01Promotion\DailyTimedPromotion\Model\Validator" />
 
-    <!-- Remove SHipping Sales rule from discount description -->
-    <type name="Magento\SalesRule\Model\RulesApplier">
-        <plugin name="lidl_salesrule_remove_shippingdescription" type="Lidl\SalesRule\Plugin\SalesRule\Model\RulesApplierPlugin"/>
-    </type>
-    <type name="Magento\SalesRule\Model\Utility">
-        <plugin name="lidl_special_salesrules" type="Lidl\SalesRule\Plugin\SalesRule\Model\UtilityPlugin"/>
+    <type name="Magento\SalesRulePromotion\Model\Utility">
+        <plugin name="dailytimedpromotion_special_salesrules" type="Del01Promotion\DailyTimedPromotion\Plugin\DailyTimedPromotion\Model\UtilityPlugin"/>
     </type>
 </config>

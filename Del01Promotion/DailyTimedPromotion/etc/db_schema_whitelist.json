@@ -1,0 +1,8 @@
+{
+  "salesrule": {
+    "column": {
+      "dailytimedpromotion_start_time": true,
+      "dailytimedpromotion_end_time": true
+    }
+  }
+}

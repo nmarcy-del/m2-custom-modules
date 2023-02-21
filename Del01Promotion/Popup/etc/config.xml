@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <promopopup>
+            <settings>
+                <enabled>1</enabled>
+                <modal_id>cpp</modal_id>
+                <delay>1</delay>
+                <limit>1</limit>
+                <reset_day>7</reset_day>
+                <type>banner</type>
+                <area>all</area>
+                <scroll_count>10</scroll_count>
+                <popup_start_time>00:01</popup_start_time>
+                <popup_end_time>23:59</popup_end_time>
+                <content><![CDATA[
+<div class="del01promotion-popup del01promotion-popup__theme1">
+    <div class="del01promotion-popup__title" style="margin: 40px">
+        <span style="font-size: 36pt; background-color: #b0082b;"><strong style="color: #ffffff;">FRAIS DE PORT OFFERTS !</strong></span></div>
+    <div class="del01promotion-popup__content">
+        <div class="del01promotion-popup__note" style="margin-left:10px;">
+            <p class="comm_text" style="display: inline;"><span style="font-size: 22pt; color: #b0082b;"> C'est en ce moment,<br> profitez de cette offre de <strong style="color: #b0082b;">18h à 00h</strong></span></p>
+            <img  style="float: right; vertical-align: center;" src="{{media url="promopopup/images/free-shipping/popup/logo-chrono-2.png"}}" alt="" width="84" height="84">
+        </div>
+    </div>
+</div>
+            ]]></content>
+            </settings>
+        </promopopup>
+    </default>
+</config>
